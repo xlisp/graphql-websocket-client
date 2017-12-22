@@ -1,0 +1,25 @@
+
+type Robot {
+    id: ID!
+    name: String!
+}
+
+type Query {
+    robots: [Robot!]!
+}
+
+type Mutation {
+    add_robot(name: String!): Robot!
+    del_robot(id: ID!): Boolean!
+}
+
+type Subscription {
+    # 在发生 robot 增减和状态改变时
+    on_robots: [Robot!]!
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+    subscription: Subscription
+}
