@@ -2,5 +2,6 @@
 ### Graphql Websocket Client
 
 ```bash
-node run
+node index.js
+
 ```
